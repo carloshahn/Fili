@@ -40,7 +40,7 @@
               <p class="mb-5">Estamos trabalhando duro para lançarmos nosso assistente na data
                 <strong>28 de Setembro de 2018</strong>! Acompanhe o andamento nos informando seu email!</p>
               <div class="input-group input-group-newsletter">
-                <input type="email" class="form-control" placeholder="Email..." aria-label="digite seu email..." aria-describedby="basic-addon">
+                <input type="email" class="form-control" id="email" placeholder="Email..." aria-label="digite seu email..." aria-describedby="basic-addon">
                 <div class="input-group-append">
                   <button class="btn btn-secondary" id="atualize" type="button">Me atualize!</button>
                 </div>
@@ -76,7 +76,12 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script>
       $('#atualize').on('click', function(){
-        alert("Obrigado! te manteremos informado.");
+        debugger;
+        if($('#email').val() == ''){
+          alert("Informe um email!")
+        } else {
+          alert("Obrigado! te manteremos informado.");
+        }
       });
     </script>
 
