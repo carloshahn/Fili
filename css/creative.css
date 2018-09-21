@@ -52,7 +52,7 @@ h6 {
 }
 
 .text-faded {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 section {
@@ -61,6 +61,7 @@ section {
 
 .section-heading {
   margin-top: 0;
+  color: #ffffff;
 }
 
 ::-moz-selection {
