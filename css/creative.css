@@ -291,8 +291,13 @@ header.masthead p {
 .text-primary {
   color: #F05F40 !important;
 }
-
-.btn {
+.btn{
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+.btn-more {
   font-weight: 700;
   text-transform: uppercase;
   border: none;
