@@ -171,22 +171,24 @@
 
                   <p class="mb-5">Preencha o formulario abaixo</p>
                   <div class="input-group input-group-newsletter">
-                    <input type="text" class="form-control" placeholder="Nome Completo" aria-label="Nome Completo" aria-describedby="basic-addon">
+                    <input id='nomeCompleto' name='nomeCompleto' type="text" class="form-control" placeholder="Nome Completo" aria-label="Nome Completo" aria-describedby="basic-addon" required>
                   </div>
                   <div class="input-group input-group-newsletter">
-                    <input type="email" class="form-control" placeholder="E-mail" aria-label="E-mail" aria-describedby="basic-addon">
+                    <input id='emailContato' nome='emailContato' type="email" class="form-control" placeholder="E-mail" aria-label="E-mail" aria-describedby="basic-addon" required>
                   </div>
                   <div class="input-group input-group-newsletter">
-                    <textarea class="form-control" rows="3" placeholder="Pergunta/Comentário"></textarea>
+                    <textarea id='texto' name='texto' class="form-control" rows="3" placeholder="Pergunta/Comentário"></textarea>
                   </div>
                   <div class="input-group input-group-newsletter">
-                    <button type="button" class="btn btn-success">Enviar</button>
+                    <button type="button" class="btn btn-success" id="send" name="send">Enviar</button>
                   </div>
                 </div>
               </div>
             </div>
         </div>
     </section>
+
+    
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -197,6 +199,27 @@
     <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
     <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 
+    <script>
+        $('#send').on('click', function(){
+          var texto = '';
+          if($('#nomeCompleto').val() == ''){
+            texto += 'Infome o seu nome\n';
+          }
+          if($('#emailContato').val() == ''){
+            texto += 'Infome o seu email\n';
+          }
+          if($('#texto').val() == ''){
+            texto += 'Digite algo no campo Pergunta/Comentário\n';
+          }
+          if(texto == ''){
+            texto = 'Email enviado';
+            $('#nomeCompleto').val('');
+            $('#emailContato').val('');
+            $('#texto').val('');
+          }
+          alert(texto);
+        });
+    </script>
     <!-- Custom scripts for this template -->
     <script src="js/creative.js"></script>
   </body>
